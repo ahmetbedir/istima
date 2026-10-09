@@ -41,7 +41,7 @@ async function fetchAll(manifest) {
 
 async function init() {
   const t0 = performance.now();
-  const manifest = await (await fetch(new URL("models/manifest.json", ROOT))).json();
+  const manifest = await (await fetch(new URL("models/model-info.json", ROOT))).json();
   const ort = await import("../vendor/ort/ort.wasm.min.mjs");
   ort.env.wasm.wasmPaths = new URL("vendor/ort/", ROOT).href;
   // Threads need SharedArrayBuffer (a cross-origin isolated context, set in manifest.json). Half the cores,

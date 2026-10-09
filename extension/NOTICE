@@ -6,7 +6,7 @@ https://github.com/ubeydgencer/istima
 This extension bundles the following third-party components.
 
 --------------------------------------------------------------------------------
-Antalia-2 Mini 1.0.0 (models/*.onnx, models/manifest.json, engine/frontend.js,
+Antalia-2 Mini 1.0.0 (models/*.onnx, models/model-info.json, engine/frontend.js,
 engine/frontend-data.json.gz, engine/tts.js; engine/worker.js is adapted from it)
 https://huggingface.co/cloud0day3/antalia-mini
 Apache License 2.0

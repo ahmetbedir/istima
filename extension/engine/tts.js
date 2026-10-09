@@ -200,7 +200,7 @@ export function istft(re, im, T) {
 // ----------------------------------------------------------------------------------- engine
 export class Engine {
   /** ort: the onnxruntime-web module; buffers: {text, cond, flow, vocoder} -> ArrayBuffer;
-   * manifest: models/manifest.json (symbols, the release's defaults and options) */
+   * manifest: models/model-info.json (symbols, the release's defaults and options) */
   static async create(ort, buffers, manifest, providers = ["wasm"]) {
     const e = new Engine();
     e.ort = ort;
