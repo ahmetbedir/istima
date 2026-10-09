@@ -1,0 +1,77 @@
+/* İstima design tokens and base styles, shared by the popup, options and welcome pages. */
+:root {
+  color-scheme: light dark;
+  --brand: #C81E3A;
+  --brand-hover: #A3142D;
+  --brand-soft: rgba(200, 30, 58, .09);
+  --on-brand: #FFFFFF;
+  --bg: #FBF8F4;
+  --surface: #FFFFFF;
+  --surface-2: #F3EEE8;
+  --text: #1C1A1F;
+  --muted: #6B6570;
+  --line: rgba(28, 26, 31, .1);
+  --ok: #1F8A5B;
+  --warn: #B7791F;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(20, 10, 15, .05), 0 8px 24px -12px rgba(20, 10, 15, .18);
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #F0566E;
+    --brand-hover: #FF7088;
+    --brand-soft: rgba(240, 86, 110, .14);
+    --on-brand: #1A0A0E;
+    --bg: #141216;
+    --surface: #1E1B21;
+    --surface-2: #2A262E;
+    --text: #F3EEE9;
+    --muted: #A79FAB;
+    --line: rgba(255, 255, 255, .1);
+    --ok: #4CC38A;
+    --warn: #E0A84A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .6);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font: 400 14px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+[hidden] { display: none !important; }
+svg { display: block; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); font-weight: 600; transition: background .15s, border-color .15s, transform .1s; }
+.btn:hover { background: var(--surface-2); }
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--brand); border-color: transparent; color: var(--on-brand); }
+.btn-primary:hover { background: var(--brand-hover); }
+.btn-lg { height: 48px; font-size: 15px; padding: 0 24px; }
+.btn-block { width: 100%; }
+.btn svg { width: 18px; height: 18px; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.kicker { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--brand); }
+.muted { color: var(--muted); }
+
+.switch { position: relative; width: 40px; height: 24px; flex: none; }
+.switch input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1; }
+.switch span { position: absolute; inset: 0; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--line); transition: background .2s; }
+.switch span::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: transform .2s; }
+.switch input:checked + span { background: var(--brand); border-color: transparent; }
+.switch input:checked + span::after { transform: translateX(16px); }
+.switch input:focus-visible + span { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+.segmented { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--surface-2); }
+.segmented button { flex: 1; height: 30px; border: 0; border-radius: 999px; background: transparent; font-weight: 600; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.segmented button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+
+kbd { font: 600 11.5px/1 var(--font); padding: 4px 7px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line); border-bottom-width: 2px; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

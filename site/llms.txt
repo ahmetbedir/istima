@@ -1,0 +1,7 @@
+# İstima
+
+> İstima is a free, open-source Chrome extension that reads Turkish news articles aloud. Speech is generated on the user's device by the Antalia-2 Mini text-to-speech model (Apache-2.0) running in ONNX Runtime Web; no text or audio leaves the computer.
+
+- [Ana sayfa (Turkish)](https://istima.ubeydgencer.com/): features, how it works, FAQ, install
+- [Gizlilik politikası](https://istima.ubeydgencer.com/gizlilik/): privacy policy (no data collected)
+- [Source code](https://github.com/ubeydgencer/istima)

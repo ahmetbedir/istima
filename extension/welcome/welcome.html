@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="welcomeTitle">İstima</title>
+  <link rel="icon" href="../icons/icon-32.png">
+  <link rel="stylesheet" href="../ui/ui.css">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <img class="logo" src="../icons/logo.svg" alt="" width="84" height="84">
+      <p class="kicker" data-i18n="welcomeKicker"></p>
+      <h1 data-i18n="welcomeHeadline"></h1>
+      <p class="lead" data-i18n="welcomeLead"></p>
+      <div class="cta">
+        <button class="btn btn-primary btn-lg" id="try" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.2-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6z" fill="currentColor"/></svg>
+          <span data-i18n="welcomeTry"></span>
+        </button>
+        <span class="muted small" id="try-status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <ol class="steps">
+      <li class="card"><span class="num">1</span><h2 data-i18n="welcomeStep1Title"></h2><p data-i18n="welcomeStep1"></p></li>
+      <li class="card"><span class="num">2</span><h2 data-i18n="welcomeStep2Title"></h2><p data-i18n="welcomeStep2"></p></li>
+      <li class="card"><span class="num">3</span><h2 data-i18n="welcomeStep3Title"></h2><p data-i18n="welcomeStep3"></p></li>
+    </ol>
+
+    <section class="card tips">
+      <div>
+        <h2 data-i18n="welcomePinTitle"></h2>
+        <p data-i18n="welcomePin"></p>
+      </div>
+      <div>
+        <h2 data-i18n="welcomeKeysTitle"></h2>
+        <p><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>D</kbd> <span data-i18n="welcomeKeyToggle"></span></p>
+        <p><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>←</kbd> <kbd>→</kbd> <span data-i18n="welcomeKeyNav"></span></p>
+      </div>
+      <div>
+        <h2 data-i18n="welcomePrivacyTitle"></h2>
+        <p data-i18n="welcomePrivacy"></p>
+      </div>
+    </section>
+
+    <p class="foot muted small">
+      <a href="../options/options.html" data-i18n="popupSettings"></a> ·
+      <a href="https://istima.ubeydgencer.com" target="_blank" rel="noopener">istima.ubeydgencer.com</a>
+    </p>
+  </main>
+  <script type="module" src="welcome.js"></script>
+</body>
+</html>

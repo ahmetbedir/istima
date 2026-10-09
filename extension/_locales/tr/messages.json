@@ -1,0 +1,338 @@
+{
+ "extName": {
+  "message": "İstima – Türkçe Haberleri Sesli Dinle"
+ },
+ "extShortName": {
+  "message": "İstima"
+ },
+ "extDescription": {
+  "message": "Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla dinleyin. Yapay zekâ sesi tamamen cihazınızda, ücretsiz ve gizli çalışır."
+ },
+ "actionTitle": {
+  "message": "İstima: bu haberi dinle"
+ },
+ "cmdToggle": {
+  "message": "Okumayı başlat / duraklat"
+ },
+ "cmdStop": {
+  "message": "Okumayı durdur"
+ },
+ "cmdNext": {
+  "message": "Sonraki paragraf"
+ },
+ "cmdPrev": {
+  "message": "Önceki paragraf"
+ },
+ "menuReadSelection": {
+  "message": "Seçili metni İstima ile dinle"
+ },
+ "menuReadPage": {
+  "message": "Bu sayfayı İstima ile dinle"
+ },
+ "selectionTitle": {
+  "message": "Seçili metin"
+ },
+ "playerRegion": {
+  "message": "İstima sesli okuyucu"
+ },
+ "pillListen": {
+  "message": "Haberi dinle"
+ },
+ "pillHide": {
+  "message": "Bu sayfada gizle"
+ },
+ "pillMinutes": {
+  "message": "~$1 dk"
+ },
+ "pillOnDevice": {
+  "message": "Cihazınızda okunur"
+ },
+ "playerMinimize": {
+  "message": "Küçült"
+ },
+ "playerExpand": {
+  "message": "Oynatıcıyı aç"
+ },
+ "playerStop": {
+  "message": "Durdur ve kapat"
+ },
+ "playerPrev": {
+  "message": "Önceki paragraf"
+ },
+ "playerNext": {
+  "message": "Sonraki paragraf"
+ },
+ "playerSpeed": {
+  "message": "Okuma hızı"
+ },
+ "playerPause": {
+  "message": "Duraklat"
+ },
+ "playerPlay": {
+  "message": "Oynat"
+ },
+ "statusLoadingPct": {
+  "message": "Ses modeli hazırlanıyor · %$1"
+ },
+ "statusLoading": {
+  "message": "Ses modeli hazırlanıyor…"
+ },
+ "statusBuffering": {
+  "message": "Ses oluşturuluyor…"
+ },
+ "statusPlaying": {
+  "message": "Okunuyor"
+ },
+ "statusPaused": {
+  "message": "Duraklatıldı"
+ },
+ "statusEnded": {
+  "message": "Haber bitti · tekrar dinlemek için oynatın"
+ },
+ "statusError": {
+  "message": "Ses oluşturulamadı. Tekrar deneyin."
+ },
+ "engineOnDevice": {
+  "message": "Cihazda"
+ },
+ "engineLoadingPct": {
+  "message": "Hazırlanıyor %$1"
+ },
+ "engineLoading": {
+  "message": "Hazırlanıyor"
+ },
+ "engineReady": {
+  "message": "Hazır"
+ },
+ "engineError": {
+  "message": "Hata"
+ },
+ "popupNowReading": {
+  "message": "Şimdi okunuyor"
+ },
+ "popupNowSelection": {
+  "message": "Seçili metin okunuyor"
+ },
+ "popupNowTest": {
+  "message": "Ses denemesi"
+ },
+ "popupGoToTab": {
+  "message": "Sekmeye git"
+ },
+ "popupStop": {
+  "message": "Durdur"
+ },
+ "popupFound": {
+  "message": "Bu sayfada Türkçe haber var"
+ },
+ "popupListen": {
+  "message": "Haberi dinle"
+ },
+ "popupParagraphs": {
+  "message": "$1 paragraf"
+ },
+ "popupNoneTitle": {
+  "message": "Okunacak Türkçe haber bulunamadı"
+ },
+ "popupNoneText": {
+  "message": "Metni seçip sağ tıklayarak “Seçili metni İstima ile dinle” diyebilirsiniz."
+ },
+ "popupReadAnyway": {
+  "message": "Yine de sayfayı oku"
+ },
+ "popupRestrictedTitle": {
+  "message": "Bu sayfada çalışamıyor"
+ },
+ "popupRestrictedText": {
+  "message": "Tarayıcının kendi sayfaları ve eklenti mağazası okunamaz. Bir haber sitesine geçin."
+ },
+ "popupNoArticle": {
+  "message": "Bu sayfada okunacak metin bulunamadı."
+ },
+ "popupPrivate": {
+  "message": "Metniniz cihazınızdan çıkmaz"
+ },
+ "popupSettings": {
+  "message": "Ayarlar"
+ },
+ "popupShortcuts": {
+  "message": "Kısayollar"
+ },
+ "optionsTitle": {
+  "message": "İstima ayarları"
+ },
+ "optionsTagline": {
+  "message": "Türkçe haberleri sesli dinleyin. Ses tamamen cihazınızda üretilir."
+ },
+ "optReading": {
+  "message": "Okuma"
+ },
+ "optSpeed": {
+  "message": "Varsayılan hız"
+ },
+ "optSpeedHint": {
+  "message": "Okuma sırasında oynatıcıdan da değiştirebilirsiniz."
+ },
+ "optReadTitle": {
+  "message": "Başlığı da oku"
+ },
+ "optReadTitleHint": {
+  "message": "Habere başlığıyla başlar."
+ },
+ "optHighlight": {
+  "message": "Okunan paragrafı vurgula"
+ },
+ "optHighlightHint": {
+  "message": "Sayfada hangi bölümün okunduğunu gösterir."
+ },
+ "optAutoScroll": {
+  "message": "Okunan yeri takip et"
+ },
+ "optAutoScrollHint": {
+  "message": "Sayfayı okunan paragrafa kaydırır."
+ },
+ "optAutoPlay": {
+  "message": "Haber açılınca otomatik oku"
+ },
+ "optAutoPlayHint": {
+  "message": "Türkçe bir haber sayfası açıldığında okumaya kendiliğinden başlar."
+ },
+ "optAppearance": {
+  "message": "Görünüm"
+ },
+ "optShowButton": {
+  "message": "“Haberi dinle” düğmesini göster"
+ },
+ "optShowButtonHint": {
+  "message": "Türkçe haber bulunan sayfalarda köşede küçük bir düğme belirir."
+ },
+ "optPosition": {
+  "message": "Düğmenin yeri"
+ },
+ "optPositionHint": {
+  "message": "Düğme ve oynatıcı ekranın hangi köşesinde dursun?"
+ },
+ "optLeft": {
+  "message": "Sol"
+ },
+ "optRight": {
+  "message": "Sağ"
+ },
+ "optSites": {
+  "message": "Düğmenin görünmeyeceği siteler"
+ },
+ "optSitesHint": {
+  "message": "Bu sitelerde düğme çıkmaz; yine de araç çubuğundaki simgeyle okuyabilirsiniz."
+ },
+ "optSitesPlaceholder": {
+  "message": "ornek.com"
+ },
+ "optSitesAdd": {
+  "message": "Ekle"
+ },
+ "optSitesEmpty": {
+  "message": "Henüz site eklenmedi."
+ },
+ "optSitesRemove": {
+  "message": "$1 sitesini kaldır"
+ },
+ "optTry": {
+  "message": "Sesi deneyin"
+ },
+ "optTryHint": {
+  "message": "İstediğiniz metni yazın; sayılar, tarihler ve kısaltmalar doğru okunur."
+ },
+ "optTryPlay": {
+  "message": "Dinle"
+ },
+ "optTrySample": {
+  "message": "İstanbul'da bugün hava parçalı bulutlu olacak; sıcaklığın 14 ile 21 derece arasında seyretmesi bekleniyor. Meteoroloji, akşam saatlerinde kuzey ilçelerde sağanak yağış uyarısında bulundu."
+ },
+ "optShortcuts": {
+  "message": "Klavye kısayolları"
+ },
+ "optAltClick": {
+  "message": "İpucu: Bir paragrafa Alt tuşuna basılı tutarak tıklarsanız okuma oradan başlar."
+ },
+ "optEditShortcuts": {
+  "message": "Kısayolları değiştir"
+ },
+ "optShortcutUnset": {
+  "message": "Atanmadı"
+ },
+ "optAbout": {
+  "message": "Hakkında"
+ },
+ "optPrivacy": {
+  "message": "İstima sunucu kullanmaz. Haber metni, sesin üretildiği yapay zekâ modeliyle birlikte tamamen bilgisayarınızda işlenir; hiçbir metin, ses ya da kullanım verisi dışarı gönderilmez."
+ },
+ "optCredits": {
+  "message": "Ses: <a href=\"https://huggingface.co/cloud0day3/antalia-mini\" target=\"_blank\" rel=\"noopener\">Antalia-2 Mini</a> (PatientDesk AI, Apache-2.0). Çalıştırma: <a href=\"https://onnxruntime.ai\" target=\"_blank\" rel=\"noopener\">ONNX Runtime Web</a> (MIT). Metin ayıklama: <a href=\"https://github.com/mozilla/readability\" target=\"_blank\" rel=\"noopener\">Mozilla Readability</a> (Apache-2.0). Ses sentetiktir; gerçek bir kişiye ait değildir."
+ },
+ "optPrivacyLink": {
+  "message": "Gizlilik politikası"
+ },
+ "optVersion": {
+  "message": "Sürüm $1"
+ },
+ "optSaved": {
+  "message": "Kaydedildi"
+ },
+ "welcomeTitle": {
+  "message": "İstima'ya hoş geldiniz"
+ },
+ "welcomeKicker": {
+  "message": "Kurulum tamam"
+ },
+ "welcomeHeadline": {
+  "message": "Haberleri okumayın, dinleyin."
+ },
+ "welcomeLead": {
+  "message": "İstima, gezdiğiniz sitelerdeki Türkçe haberleri doğal bir sesle okur. Ses yapay zekâ ile tamamen cihazınızda üretilir: internete bir şey gönderilmez, ücret yoktur."
+ },
+ "welcomeTry": {
+  "message": "Sesi dinleyin"
+ },
+ "welcomeSample": {
+  "message": "Merhaba, ben İstima. Gezdiğiniz sitelerdeki Türkçe haberleri sizin için okuyorum. Sayıları, tarihleri ve kısaltmaları da doğru okurum; örneğin 29 Ekim 1923, saat 10:30 ya da TBMM."
+ },
+ "welcomeStep1Title": {
+  "message": "Bir haber açın"
+ },
+ "welcomeStep1": {
+  "message": "Herhangi bir Türkçe haber sitesine girin. İstima haberi kendiliğinden bulur."
+ },
+ "welcomeStep2Title": {
+  "message": "“Haberi dinle”ye basın"
+ },
+ "welcomeStep2": {
+  "message": "Sağ alttaki düğmeye ya da araç çubuğundaki İstima simgesine tıklayın."
+ },
+ "welcomeStep3Title": {
+  "message": "Arkanıza yaslanın"
+ },
+ "welcomeStep3": {
+  "message": "Okunan paragraf vurgulanır. Hızı ayarlayın, paragraf atlayın, başka sekmeye geçin; okuma sürer."
+ },
+ "welcomePinTitle": {
+  "message": "Simgeyi sabitleyin"
+ },
+ "welcomePin": {
+  "message": "Araç çubuğundaki yapboz simgesine tıklayıp İstima'nın yanındaki iğneye basın."
+ },
+ "welcomeKeysTitle": {
+  "message": "Kısayollar"
+ },
+ "welcomeKeyToggle": {
+  "message": "başlat / duraklat"
+ },
+ "welcomeKeyNav": {
+  "message": "paragraf atla"
+ },
+ "welcomePrivacyTitle": {
+  "message": "Gizlilik"
+ },
+ "welcomePrivacy": {
+  "message": "Sunucu yok, hesap yok, takip yok. Okunan metin bilgisayarınızdan hiç çıkmaz."
+ }
+}

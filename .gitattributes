@@ -1,0 +1,6 @@
+extension/vendor/** linguist-vendored
+extension/engine/frontend.js linguist-vendored
+extension/engine/tts.js linguist-vendored
+*.onnx binary
+*.wasm binary
+*.gz binary

@@ -1,0 +1,18 @@
+body { background: radial-gradient(1200px 500px at 50% -120px, var(--brand-soft), transparent 70%), var(--bg); min-height: 100vh; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 64px 20px 64px; }
+.hero { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+.logo { margin: 0 auto 22px; border-radius: 20px; box-shadow: 0 16px 40px -16px rgba(200, 30, 58, .6); }
+.hero h1 { font: 700 clamp(30px, 5vw, 46px)/1.1 var(--serif); letter-spacing: -.02em; margin: 10px 0 14px; text-wrap: balance; }
+.lead { font-size: 17px; color: var(--muted); margin: 0 auto 28px; text-wrap: pretty; }
+.cta { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.small { font-size: 13px; }
+.steps { list-style: none; padding: 0; margin: 0 0 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.steps li { padding: 22px; }
+.num { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-weight: 700; }
+.steps h2, .tips h2 { font: 650 17px/1.3 var(--serif); margin: 12px 0 6px; }
+.steps p, .tips p { margin: 0; color: var(--muted); }
+.tips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 22px; }
+.tips h2 { margin-top: 0; }
+.tips p + p { margin-top: 8px; }
+.foot { text-align: center; margin-top: 32px; }
+@media (max-width: 760px) { .steps, .tips { grid-template-columns: 1fr; } }

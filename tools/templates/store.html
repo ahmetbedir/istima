@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>İstima store assets</title>
+<link rel="stylesheet" href="/site/assets/fonts.css">
+<style>
+  :root { --brand: #C81E3A; --brand-2: #A3142D; --paper: #FBF8F4; --alt: #F3EBE2; --text: #1C1A1F; --muted: #625C67; --ink: #17141A; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100vw; height: 100vh; overflow: hidden; }
+  body { font-family: "Inter", system-ui, sans-serif; color: var(--text); background: var(--paper); -webkit-font-smoothing: antialiased; }
+  .v { display: none; position: absolute; inset: 0; overflow: hidden; }
+  h1, h2 { font-family: "Newsreader", Georgia, serif; font-weight: 600; letter-spacing: -.025em; line-height: 1.02; margin: 0; }
+  em { font-style: italic; color: var(--brand); font-weight: 500; }
+  .kicker { font: 700 15px/1 "Inter"; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+  .brandrow { display: flex; align-items: center; gap: 14px; font: 700 34px/1 "Newsreader", serif; }
+  .brandrow img { width: 54px; height: 54px; border-radius: 13px; box-shadow: 0 12px 28px -12px rgba(200, 30, 58, .7); }
+  .frame { border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.05), 0 40px 80px -30px rgba(80, 10, 25, .45); border: 1px solid rgba(0,0,0,.08); }
+  .frame .bar { height: 34px; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #EFE9E2; border-bottom: 1px solid rgba(0,0,0,.06); }
+  .frame .bar i { width: 11px; height: 11px; border-radius: 50%; background: #D6CDC4; }
+  .frame img { display: block; width: 100%; }
+  .stage .frame, .tilt { display: flex; flex-direction: column; }
+  .stage .frame { height: 100%; }
+  .stage .frame img, .tilt img { flex: 1; min-height: 0; object-fit: cover; object-position: right bottom; }
+  .tilt { height: 470px; }
+  .glow { position: absolute; inset: 0; background: radial-gradient(900px 500px at 85% 0%, rgba(200,30,58,.12), transparent 70%), radial-gradient(700px 400px at 0% 100%, rgba(242,165,65,.12), transparent 70%); }
+
+  /* 1280x800 screenshots: headline on top, product below */
+  .shot { padding: 64px 72px 0; }
+  .shot h2 { font-size: 58px; max-width: 900px; }
+  .shot p { font-size: 22px; color: var(--muted); margin: 16px 0 0; max-width: 820px; line-height: 1.45; }
+  .shot .stage { position: absolute; left: 72px; right: 72px; top: 262px; bottom: 36px; }
+  .crop { width: 100%; height: 100%; object-fit: cover; object-position: right bottom; }
+
+  /* og and marquee */
+  .split { display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; height: 100%; padding: 0 0 0 72px; gap: 48px; position: relative; }
+  .split h1 { font-size: 64px; margin: 26px 0 18px; }
+  .split p { font-size: 22px; color: var(--muted); margin: 0; line-height: 1.45; }
+  .chips { display: flex; gap: 10px; margin-top: 26px; flex-wrap: wrap; }
+  .chips span { padding: 9px 16px; border-radius: 99px; background: #fff; border: 1px solid rgba(0,0,0,.08); font-weight: 600; font-size: 16px; }
+  .tilt { transform: perspective(1600px) rotateY(-9deg) rotateX(3deg); transform-origin: left center; width: 760px; }
+  .popup { position: absolute; border-radius: 16px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.35); border: 1px solid rgba(0,0,0,.08); }
+
+  /* small promo tile 440x280 */
+  .v.on { display: block; }
+  .tile.on { display: flex; }
+  .tile { background: linear-gradient(135deg, #E23A55, #A3142D); color: #FFF6EC; flex-direction: column; justify-content: center; padding: 0 36px; }
+  .tile .brandrow { color: #FFF6EC; font-size: 40px; }
+  .tile .brandrow img { width: 64px; height: 64px; box-shadow: 0 10px 24px -8px rgba(0,0,0,.35); border-radius: 15px; }
+  .tile h2 { font-size: 31px; margin-top: 22px; font-weight: 500; }
+  .tile p { font-size: 15px; margin: 10px 0 0; opacity: .85; font-weight: 500; }
+  .tile .waves { position: absolute; right: -60px; bottom: -60px; width: 260px; opacity: .12; color: #fff; }
+
+  .privacy-list { list-style: none; padding: 0; margin: 34px 0 0; display: grid; gap: 18px; font-size: 24px; font-weight: 500; }
+  .privacy-list li { display: flex; gap: 14px; align-items: center; }
+  .privacy-list b { width: 36px; height: 36px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; flex: none; }
+  .privacy-list b::after { content: ""; width: 14px; height: 8px; border-left: 3px solid #fff; border-bottom: 3px solid #fff; transform: translateY(-2px) rotate(-45deg); }
+  .dark { background: var(--ink); color: #F3EEE9; }
+  .dark p { color: #ABA3AF; }
+  .dark em { color: #FF8A9C; }
+</style>
+</head>
+<body>
+
+<!-- 1: hero -->
+<section class="v shot" id="s1">
+  <div class="glow"></div>
+  <div class="kicker" style="position:relative">Ücretsiz · Açık kaynak · %100 cihazda</div>
+  <h2 style="position:relative;margin-top:18px">Türkçe haberleri okumayın, <em>dinleyin.</em></h2>
+  <div class="stage"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/tools/out/shots/reading-light.png" alt=""></div></div>
+</section>
+
+<!-- 2: pill -->
+<section class="v shot" id="s2">
+  <div class="glow"></div>
+  <h2 style="position:relative">Haber bulunduğunda <em>tek tık</em> yeter</h2>
+  <p style="position:relative">İstima sayfadaki Türkçe haberi kendisi bulur; menüleri, reklamları ve yorumları atlar.</p>
+  <div class="stage"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/tools/out/shots/pill-light.png" alt=""></div></div>
+</section>
+
+<!-- 3: popup -->
+<section class="v" id="s3" style="background:var(--alt)">
+  <div class="glow"></div>
+  <div style="position:absolute;left:72px;top:0;bottom:0;width:560px;display:flex;flex-direction:column;justify-content:center">
+    <div class="kicker">Her sekmeden kontrol</div>
+    <h2 style="font-size:60px;margin-top:18px">Okuma siz başka işe geçince de <em>sürer</em></h2>
+    <p style="font-size:22px;color:var(--muted);line-height:1.45;margin-top:18px">Araç çubuğundan duraklatın, paragraf atlayın, hızı 0,8× ile 1,75× arasında ayarlayın. Kısayollar: Alt+Shift+D.</p>
+  </div>
+  <img class="popup" src="/tools/out/shots/popup-light.png" alt="" style="right:110px;top:70px;height:660px">
+</section>
+
+<!-- 4: privacy -->
+<section class="v dark" id="s4">
+  <div style="position:absolute;left:72px;top:0;bottom:0;width:600px;display:flex;flex-direction:column;justify-content:center">
+    <div class="kicker" style="color:#FF8A9C">Gizlilik</div>
+    <h2 style="font-size:62px;margin-top:18px">Metniniz <em>cihazınızdan</em> çıkmaz</h2>
+    <ul class="privacy-list">
+      <li><b></b>Yapay zekâ sesi tarayıcınızda üretilir</li>
+      <li><b></b>Sunucu, hesap, analitik yok</li>
+      <li><b></b>İnternet olmadan da okur</li>
+      <li><b></b>Açık kaynak, Apache-2.0</li>
+    </ul>
+  </div>
+  <div class="frame" style="position:absolute;right:-120px;top:90px;width:640px;border-color:rgba(255,255,255,.1)"><img src="/tools/out/shots/options-dark.png" alt=""></div>
+</section>
+
+<!-- 5: dark mode -->
+<section class="v shot dark" id="s5">
+  <h2 style="position:relative">Rakamları, tarihleri, kısaltmaları <em>doğru</em> okur</h2>
+  <p style="position:relative">“752 bin 400”, “yüzde 18”, “saat 09:45”, “TBMM”… Hepsi Türkçe okunuşlarıyla.</p>
+  <div class="stage"><div class="frame" style="border-color:rgba(255,255,255,.1)"><div class="bar" style="background:#1E1B21;border-color:rgba(255,255,255,.06)"><i style="background:#3a353d"></i><i style="background:#3a353d"></i><i style="background:#3a353d"></i></div><img src="/tools/out/shots/reading-dark.png" alt=""></div></div>
+</section>
+
+<!-- small promo tile 440x280 -->
+<section class="v tile" id="small">
+  <svg class="waves" viewBox="24 18 80 92"><circle cx="44" cy="33" r="11" fill="currentColor"/><rect x="34" y="53" width="20" height="50" rx="10" fill="currentColor"/><path d="M68 62a22 22 0 0 1 0 32" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/><path d="M82 49a40 40 0 0 1 0 58" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></svg>
+  <div class="brandrow"><img src="/brand/logo.svg" alt="">İstima</div>
+  <h2>Türkçe haberleri<br>sesli dinleyin</h2>
+  <p>Ücretsiz · %100 cihazda</p>
+</section>
+
+<!-- marquee 1400x560 and og 1200x630 share a layout -->
+<section class="v" id="marquee">
+  <div class="glow"></div>
+  <div class="split">
+    <div>
+      <div class="brandrow"><img src="/brand/logo.svg" alt="">İstima</div>
+      <h1>Haberleri okumayın,<br><em>dinleyin.</em></h1>
+      <p>Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla dinleyin. Yapay zekâ sesi tamamen cihazınızda çalışır.</p>
+    </div>
+    <div class="tilt frame"><div class="bar"><i></i><i></i><i></i></div><img src="/tools/out/shots/reading-light.png" alt=""></div>
+  </div>
+</section>
+
+<section class="v" id="og">
+  <div class="glow"></div>
+  <div class="split" style="grid-template-columns: 1fr 1fr; padding-left: 64px">
+    <div>
+      <div class="brandrow"><img src="/brand/logo.svg" alt="">İstima</div>
+      <h1 style="font-size:60px">Haberleri okumayın,<br><em>dinleyin.</em></h1>
+      <div class="chips"><span>Ücretsiz</span><span>%100 cihazda</span><span>Açık kaynak</span></div>
+    </div>
+    <div class="tilt frame" style="width:700px"><div class="bar"><i></i><i></i><i></i></div><img src="/tools/out/shots/reading-light.png" alt=""></div>
+  </div>
+</section>
+
+<script>
+  document.getElementById(new URLSearchParams(location.search).get("v") || "s1").classList.add("on");
+</script>
+</body>
+</html>

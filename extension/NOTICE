@@ -1,0 +1,46 @@
+İstima
+Copyright 2026 Ubeyd Gencer
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+https://github.com/ubeydgencer/istima
+
+This extension bundles the following third-party components.
+
+--------------------------------------------------------------------------------
+Antalia-2 Mini 1.0.0 (models/*.onnx, models/manifest.json, engine/frontend.js,
+engine/frontend-data.json.gz, engine/tts.js; engine/worker.js is adapted from it)
+https://huggingface.co/cloud0day3/antalia-mini
+Apache License 2.0
+
+Antalia-2 Mini
+Copyright 2026 PatientDesk AI
+
+The code, the text normaliser and the model weights are licensed under the Apache License,
+Version 2.0 (see LICENSE).
+
+This package includes PatientDesk AI's Turkish text normaliser (antalia_mini/text/normalize.py,
+antalia_mini/text/foreign.py, antalia_mini/text/data/lexicon.json, antalia_mini/text/data/tr_vocab.json),
+released under the same licence. Vendored verbatim from turkish-tts commit 3ed2e60 (2026-10-07).
+
+At run time the normaliser uses the CMU Pronouncing Dictionary through the `cmudict` package
+(Copyright Carnegie Mellon University, BSD 2-Clause licence); it is a dependency, not included here.
+
+The model weights were trained on synthetic speech generated with VoxCPM2 (OpenBMB, Apache-2.0).
+
+The model reimplements published methods: monotonic alignment search (Glow-TTS, Kim et al. 2020;
+Matcha-TTS, Mehta et al. 2024), flow matching (Lipman et al. 2023), shortcut models (Frans et al. 2024),
+adaLN-single (PixArt-alpha, Chen et al. 2023), ConvNeXt (Liu et al. 2022), Vocos (Siuzdak 2023),
+HiFi-GAN's multi-period discriminator (Kong et al. 2020), UnivNet's multi-resolution discriminator
+(Jang et al. 2021), RoPE (Su et al. 2021), SwiGLU (Shazeer 2020). No code from those projects is included.
+
+The ONNX graphs and the browser inference code come from the model's Hugging Face Space
+(https://huggingface.co/spaces/cloud0day3/antalia-mini), Apache License 2.0.
+
+--------------------------------------------------------------------------------
+ONNX Runtime Web 1.30.0 (vendor/ort/)
+Copyright (c) Microsoft Corporation
+MIT License (see vendor/ort/LICENSE)
+
+--------------------------------------------------------------------------------
+Mozilla Readability 0.6.0 (vendor/readability/)
+Copyright (c) 2010 Arc90 Inc
+Apache License 2.0 (see vendor/readability/LICENSE.md)

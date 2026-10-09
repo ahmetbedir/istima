@@ -1,0 +1,338 @@
+{
+ "extName": {
+  "message": "İstima – Listen to Turkish News"
+ },
+ "extShortName": {
+  "message": "İstima"
+ },
+ "extDescription": {
+  "message": "Listen to Turkish news articles on any site with one click. The AI voice runs entirely on your device: free and private."
+ },
+ "actionTitle": {
+  "message": "İstima: listen to this article"
+ },
+ "cmdToggle": {
+  "message": "Start / pause reading"
+ },
+ "cmdStop": {
+  "message": "Stop reading"
+ },
+ "cmdNext": {
+  "message": "Next paragraph"
+ },
+ "cmdPrev": {
+  "message": "Previous paragraph"
+ },
+ "menuReadSelection": {
+  "message": "Listen to selection with İstima"
+ },
+ "menuReadPage": {
+  "message": "Listen to this page with İstima"
+ },
+ "selectionTitle": {
+  "message": "Selected text"
+ },
+ "playerRegion": {
+  "message": "İstima reader"
+ },
+ "pillListen": {
+  "message": "Listen to article"
+ },
+ "pillHide": {
+  "message": "Hide on this page"
+ },
+ "pillMinutes": {
+  "message": "~$1 min"
+ },
+ "pillOnDevice": {
+  "message": "Read on your device"
+ },
+ "playerMinimize": {
+  "message": "Minimise"
+ },
+ "playerExpand": {
+  "message": "Open player"
+ },
+ "playerStop": {
+  "message": "Stop and close"
+ },
+ "playerPrev": {
+  "message": "Previous paragraph"
+ },
+ "playerNext": {
+  "message": "Next paragraph"
+ },
+ "playerSpeed": {
+  "message": "Reading speed"
+ },
+ "playerPause": {
+  "message": "Pause"
+ },
+ "playerPlay": {
+  "message": "Play"
+ },
+ "statusLoadingPct": {
+  "message": "Preparing the voice model · $1%"
+ },
+ "statusLoading": {
+  "message": "Preparing the voice model…"
+ },
+ "statusBuffering": {
+  "message": "Generating speech…"
+ },
+ "statusPlaying": {
+  "message": "Reading"
+ },
+ "statusPaused": {
+  "message": "Paused"
+ },
+ "statusEnded": {
+  "message": "Finished · press play to listen again"
+ },
+ "statusError": {
+  "message": "Could not generate speech. Please try again."
+ },
+ "engineOnDevice": {
+  "message": "On device"
+ },
+ "engineLoadingPct": {
+  "message": "Loading $1%"
+ },
+ "engineLoading": {
+  "message": "Loading"
+ },
+ "engineReady": {
+  "message": "Ready"
+ },
+ "engineError": {
+  "message": "Error"
+ },
+ "popupNowReading": {
+  "message": "Now reading"
+ },
+ "popupNowSelection": {
+  "message": "Reading selection"
+ },
+ "popupNowTest": {
+  "message": "Voice test"
+ },
+ "popupGoToTab": {
+  "message": "Go to tab"
+ },
+ "popupStop": {
+  "message": "Stop"
+ },
+ "popupFound": {
+  "message": "Turkish article on this page"
+ },
+ "popupListen": {
+  "message": "Listen to article"
+ },
+ "popupParagraphs": {
+  "message": "$1 paragraphs"
+ },
+ "popupNoneTitle": {
+  "message": "No Turkish article found"
+ },
+ "popupNoneText": {
+  "message": "Select any text and right-click “Listen to selection with İstima”."
+ },
+ "popupReadAnyway": {
+  "message": "Read the page anyway"
+ },
+ "popupRestrictedTitle": {
+  "message": "Can't run on this page"
+ },
+ "popupRestrictedText": {
+  "message": "Browser pages and the extension store can't be read. Open a news site."
+ },
+ "popupNoArticle": {
+  "message": "No readable text found on this page."
+ },
+ "popupPrivate": {
+  "message": "Your text never leaves your device"
+ },
+ "popupSettings": {
+  "message": "Settings"
+ },
+ "popupShortcuts": {
+  "message": "Shortcuts"
+ },
+ "optionsTitle": {
+  "message": "İstima settings"
+ },
+ "optionsTagline": {
+  "message": "Listen to Turkish news. Speech is generated entirely on your device."
+ },
+ "optReading": {
+  "message": "Reading"
+ },
+ "optSpeed": {
+  "message": "Default speed"
+ },
+ "optSpeedHint": {
+  "message": "You can also change it from the player while reading."
+ },
+ "optReadTitle": {
+  "message": "Read the headline"
+ },
+ "optReadTitleHint": {
+  "message": "Starts with the article's headline."
+ },
+ "optHighlight": {
+  "message": "Highlight the current paragraph"
+ },
+ "optHighlightHint": {
+  "message": "Shows which part of the page is being read."
+ },
+ "optAutoScroll": {
+  "message": "Follow along"
+ },
+ "optAutoScrollHint": {
+  "message": "Scrolls the page to the paragraph being read."
+ },
+ "optAutoPlay": {
+  "message": "Read articles automatically"
+ },
+ "optAutoPlayHint": {
+  "message": "Starts reading as soon as a Turkish article opens."
+ },
+ "optAppearance": {
+  "message": "Appearance"
+ },
+ "optShowButton": {
+  "message": "Show the “Listen” button"
+ },
+ "optShowButtonHint": {
+  "message": "A small button appears in the corner of pages with a Turkish article."
+ },
+ "optPosition": {
+  "message": "Button position"
+ },
+ "optPositionHint": {
+  "message": "Which corner should the button and player use?"
+ },
+ "optLeft": {
+  "message": "Left"
+ },
+ "optRight": {
+  "message": "Right"
+ },
+ "optSites": {
+  "message": "Sites without the button"
+ },
+ "optSitesHint": {
+  "message": "The button won't appear on these sites; you can still read them from the toolbar icon."
+ },
+ "optSitesPlaceholder": {
+  "message": "example.com"
+ },
+ "optSitesAdd": {
+  "message": "Add"
+ },
+ "optSitesEmpty": {
+  "message": "No sites added yet."
+ },
+ "optSitesRemove": {
+  "message": "Remove $1"
+ },
+ "optTry": {
+  "message": "Try the voice"
+ },
+ "optTryHint": {
+  "message": "Type any Turkish text; numbers, dates and abbreviations are read correctly."
+ },
+ "optTryPlay": {
+  "message": "Listen"
+ },
+ "optTrySample": {
+  "message": "İstanbul'da bugün hava parçalı bulutlu olacak; sıcaklığın 14 ile 21 derece arasında seyretmesi bekleniyor. Meteoroloji, akşam saatlerinde kuzey ilçelerde sağanak yağış uyarısında bulundu."
+ },
+ "optShortcuts": {
+  "message": "Keyboard shortcuts"
+ },
+ "optAltClick": {
+  "message": "Tip: Alt-click any paragraph to start reading from there."
+ },
+ "optEditShortcuts": {
+  "message": "Change shortcuts"
+ },
+ "optShortcutUnset": {
+  "message": "Not set"
+ },
+ "optAbout": {
+  "message": "About"
+ },
+ "optPrivacy": {
+  "message": "İstima uses no server. The article text is processed entirely on your computer by the bundled AI model; no text, audio or usage data is ever sent anywhere."
+ },
+ "optCredits": {
+  "message": "Voice: <a href=\"https://huggingface.co/cloud0day3/antalia-mini\" target=\"_blank\" rel=\"noopener\">Antalia-2 Mini</a> (PatientDesk AI, Apache-2.0). Runtime: <a href=\"https://onnxruntime.ai\" target=\"_blank\" rel=\"noopener\">ONNX Runtime Web</a> (MIT). Article extraction: <a href=\"https://github.com/mozilla/readability\" target=\"_blank\" rel=\"noopener\">Mozilla Readability</a> (Apache-2.0). The voice is synthetic, not a real person's."
+ },
+ "optPrivacyLink": {
+  "message": "Privacy policy"
+ },
+ "optVersion": {
+  "message": "Version $1"
+ },
+ "optSaved": {
+  "message": "Saved"
+ },
+ "welcomeTitle": {
+  "message": "Welcome to İstima"
+ },
+ "welcomeKicker": {
+  "message": "You're all set"
+ },
+ "welcomeHeadline": {
+  "message": "Don't read the news. Listen to it."
+ },
+ "welcomeLead": {
+  "message": "İstima reads Turkish news articles on the sites you visit in a natural voice. Speech is generated by AI entirely on your device: nothing is sent online and it's free."
+ },
+ "welcomeTry": {
+  "message": "Hear the voice"
+ },
+ "welcomeSample": {
+  "message": "Merhaba, ben İstima. Gezdiğiniz sitelerdeki Türkçe haberleri sizin için okuyorum. Sayıları, tarihleri ve kısaltmaları da doğru okurum; örneğin 29 Ekim 1923, saat 10:30 ya da TBMM."
+ },
+ "welcomeStep1Title": {
+  "message": "Open an article"
+ },
+ "welcomeStep1": {
+  "message": "Visit any Turkish news site. İstima finds the article on its own."
+ },
+ "welcomeStep2Title": {
+  "message": "Press “Listen”"
+ },
+ "welcomeStep2": {
+  "message": "Click the button in the corner or the İstima icon in the toolbar."
+ },
+ "welcomeStep3Title": {
+  "message": "Sit back"
+ },
+ "welcomeStep3": {
+  "message": "The current paragraph is highlighted. Change speed, skip paragraphs or switch tabs; reading continues."
+ },
+ "welcomePinTitle": {
+  "message": "Pin the icon"
+ },
+ "welcomePin": {
+  "message": "Click the puzzle icon in the toolbar and pin İstima."
+ },
+ "welcomeKeysTitle": {
+  "message": "Shortcuts"
+ },
+ "welcomeKeyToggle": {
+  "message": "start / pause"
+ },
+ "welcomeKeyNav": {
+  "message": "skip paragraphs"
+ },
+ "welcomePrivacyTitle": {
+  "message": "Privacy"
+ },
+ "welcomePrivacy": {
+  "message": "No server, no account, no tracking. The text never leaves your computer."
+ }
+}
