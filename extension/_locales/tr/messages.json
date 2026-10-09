@@ -300,13 +300,13 @@
   "message": "Bir haber açın"
  },
  "welcomeStep1": {
-  "message": "Herhangi bir Türkçe haber sitesine girin. İstima haberi kendiliğinden bulur."
+  "message": "Herhangi bir Türkçe haber sitesine girin. İstima haberi sayfadan kendisi ayıklar."
  },
  "welcomeStep2Title": {
-  "message": "“Haberi dinle”ye basın"
+  "message": "Dinle'ye basın"
  },
  "welcomeStep2": {
-  "message": "Sağ alttaki düğmeye ya da araç çubuğundaki İstima simgesine tıklayın."
+  "message": "Araç çubuğundaki İstima simgesine tıklayın ya da Alt+Shift+D'ye basın. Otomatik bulma açıksa köşedeki “Haberi dinle” düğmesini de kullanabilirsiniz."
  },
  "welcomeStep3Title": {
   "message": "Arkanıza yaslanın"
@@ -334,5 +334,29 @@
  },
  "welcomePrivacy": {
   "message": "Sunucu yok, hesap yok, takip yok. Okunan metin bilgisayarınızdan hiç çıkmaz."
+ },
+ "optAutoDetect": {
+  "message": "Haberleri otomatik bul"
+ },
+ "optAutoDetectHint": {
+  "message": "Açıkken İstima her sayfada Türkçe haber olup olmadığına cihazınızda bakar ve köşede “Haberi dinle” düğmesini gösterir. Chrome bunun için tüm sitelere erişim izni ister; hiçbir veri cihazdan çıkmaz. Kapalıyken araç çubuğundaki simgeyle, sağ tıkla ya da Alt+Shift+D ile okursunuz."
+ },
+ "popupAutoOff": {
+  "message": "Köşedeki “Haberi dinle” düğmesi kapalı"
+ },
+ "popupAutoEnable": {
+  "message": "Otomatik bulmayı aç"
+ },
+ "welcomeAutoTitle": {
+  "message": "Haberleri kendisi bulsun mu?"
+ },
+ "welcomeAuto": {
+  "message": "Açarsanız, Türkçe bir haber açtığınızda köşede “Haberi dinle” düğmesi kendiliğinden belirir. Chrome bunun için tüm sitelere erişim izni ister; kontrol cihazınızda yapılır, hiçbir veri gönderilmez. Açmazsanız araç çubuğundaki simgeyle ya da Alt+Shift+D ile okursunuz."
+ },
+ "welcomeAutoButton": {
+  "message": "Otomatik bulmayı aç"
+ },
+ "welcomeAutoOn": {
+  "message": "Açık ✓"
  }
 }

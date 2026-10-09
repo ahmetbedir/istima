@@ -53,7 +53,7 @@
         "applicationSubCategory": "Text to speech",
         "operatingSystem": "Google Chrome, Microsoft Edge, Brave, Opera, Vivaldi",
         "inLanguage": "tr",
-        "softwareVersion": "1.0.0",
+        "softwareVersion": "1.0.1",
         "image": "https://istima.ubeydgencer.com/assets/og-image.png",
         "screenshot": "https://istima.ubeydgencer.com/assets/img/reading-light.webp",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
@@ -194,7 +194,7 @@
           <article class="feature">
             <span class="f-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.2-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6z" fill="currentColor"/></svg></span>
             <h3>Tek tıkla dinleyin</h3>
-            <p>Türkçe bir haber açtığınızda köşede “Haberi dinle” düğmesi belirir. Menü, reklam ve yorumlar atlanır; yalnızca haber okunur.</p>
+            <p>Haberde araç çubuğundaki İstima simgesine basın ya da otomatik bulmayı açın; köşede “Haberi dinle” düğmesi belirir. Menü, reklam ve yorumlar atlanır.</p>
           </article>
           <article class="feature">
             <span class="f-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
@@ -249,15 +249,15 @@
               <img src="/assets/img/pill-light.webp" width="1600" height="1000" alt="Haber sayfasının sağ alt köşesinde Haberi dinle düğmesi" loading="lazy">
             </picture>
             <h3><span>1</span>Bir haber açın</h3>
-            <p>İstima sayfadaki Türkçe haberi bulur ve köşede “Haberi dinle” düğmesini gösterir. Haberin kaç dakika süreceğini de yazar.</p>
+            <p>İstima sayfadaki Türkçe haberi kendisi ayıklar. Otomatik bulmayı açtıysanız köşede “Haberi dinle” düğmesi haberin kaç dakika süreceğiyle birlikte belirir.</p>
           </li>
           <li>
             <picture>
               <source srcset="/assets/img/reading-dark.webp" media="(prefers-color-scheme: dark)">
               <img src="/assets/img/reading-light.webp" width="1600" height="1000" alt="Okunan paragraf vurgulanmış haber sayfası ve oynatıcı" loading="lazy">
             </picture>
-            <h3><span>2</span>Düğmeye basın</h3>
-            <p>Ses birkaç saniye içinde başlar. Okunan paragraf vurgulanır; ilerleme, hız ve paragraf atlama oynatıcıdadır.</p>
+            <h3><span>2</span>Dinle'ye basın</h3>
+            <p>Köşedeki düğmeye, araç çubuğu simgesine ya da <kbd>Alt</kbd><kbd>Shift</kbd><kbd>D</kbd>'ye basın. Ses birkaç saniye içinde başlar; okunan paragraf vurgulanır.</p>
           </li>
           <li>
             <picture>
@@ -306,7 +306,8 @@
           <details><summary>İstima ücretli mi?</summary><p>Hayır. İstima tamamen ücretsiz ve <a href="https://github.com/ubeydgencer/istima">açık kaynaktır</a> (Apache-2.0); hesap, abonelik veya reklam yoktur.</p></details>
           <details><summary>Okuduğum haberler bir sunucuya gönderiliyor mu?</summary><p>Hayır. Ses, eklentinin içindeki yapay zekâ modeliyle doğrudan bilgisayarınızda üretilir. Metin, ses veya kullanım verisi hiçbir yere gönderilmez. Ayrıntılar <a href="/gizlilik/">gizlilik politikasında</a>.</p></details>
           <details><summary>Hangi tarayıcılarda çalışır?</summary><p>Google Chrome, Microsoft Edge, Brave, Opera, Vivaldi ve Arc gibi Chromium tabanlı tarayıcıların güncel sürümlerinde (Chrome 116 ve üzeri) çalışır.</p></details>
-          <details><summary>Hangi haber sitelerinde çalışır?</summary><p>Belirli bir site listesi yoktur. İstima açtığınız sayfadaki Türkçe haber metnini kendisi bulur. Anadolu Ajansı, NTV, Hürriyet, Sözcü, Cumhuriyet, Habertürk, Milliyet ve TRT Haber gibi sitelerde denenmiştir. Düğme bir sitede çıkmıyorsa araç çubuğundaki simgeden “Yine de sayfayı oku” diyebilirsiniz.</p></details>
+          <details><summary>Hangi haber sitelerinde çalışır?</summary><p>Belirli bir site listesi yoktur. İstima açtığınız sayfadaki Türkçe haber metnini kendisi bulur. Anadolu Ajansı, NTV, Hürriyet, Sözcü, Cumhuriyet, Habertürk, Milliyet ve TRT Haber gibi sitelerde denenmiştir. Köşedeki düğme için ayarlardan “Haberleri otomatik bul” seçeneğini açın; açmazsanız araç çubuğundaki simgeyle okuyabilirsiniz.</p></details>
+          <details><summary>Neden “tüm sitelere erişim” izni istiyor?</summary><p>İstemiyor, varsayılan olarak yalnızca siz simgeye bastığınızda o sekmeye erişir. Bu izin sadece “Haberleri otomatik bul” seçeneğini açarsanız istenir, çünkü İstima'nın hangi sitede haber olduğunu önceden bilmesi mümkün değil. Kontrol tamamen cihazınızda yapılır ve hiçbir veri gönderilmez.</p></details>
           <details><summary>İnternet bağlantısı gerekiyor mu?</summary><p>Seslendirme için gerekmez. Model eklentiyle birlikte gelir (yaklaşık 23 MB); sayfa bir kez açıldıktan sonra okuma tamamen çevrimdışı yapılır.</p></details>
           <details><summary>Bilgisayarımı yavaşlatır mı?</summary><p>Hayır. Model yalnızca siz okumayı başlattığınızda yüklenir ve konuşmayı gerçek zamandan çok daha hızlı üretir. Okuma bitince kaynaklar serbest bırakılır.</p></details>
           <details><summary>Ses kime ait?</summary><p>Ses sentetiktir, gerçek bir kişiye ait değildir. PatientDesk AI'ın Apache-2.0 lisanslı açık kaynak modeli <a href="https://huggingface.co/cloud0day3/antalia-mini" rel="noopener" target="_blank">Antalia-2 Mini</a> kullanılır.</p></details>
@@ -326,7 +327,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span id="store-label">Chrome Web Mağazası çok yakında</span>
           </a>
-          <a class="btn btn-ghost btn-lg" href="https://github.com/ubeydgencer/istima/releases/latest/download/istima-1.0.0.zip">Zip olarak indir (v1.0.0)</a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/ubeydgencer/istima/releases/latest/download/istima-1.0.1.zip">Zip olarak indir (v1.0.1)</a>
         </div>
         <div class="manual card" id="zip">
           <h3>Zip ile kurulum</h3>

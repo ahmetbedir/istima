@@ -1,6 +1,14 @@
 import { t, localize } from "../shared/i18n.js";
+import { hasAutoDetect, requestAutoDetect } from "../shared/auto-detect.js";
 
 localize();
+const renderAuto = async () => {
+  const on = await hasAutoDetect();
+  document.getElementById("auto-on").hidden = on;
+  document.getElementById("auto-done").hidden = !on;
+};
+document.getElementById("auto-on").addEventListener("click", () => requestAutoDetect().then(renderAuto, renderAuto));
+renderAuto();
 const status = document.getElementById("try-status");
 document.getElementById("try").addEventListener("click", () => {
   chrome.runtime.sendMessage({ type: "start", source: "test", title: t("popupNowTest"), paragraphs: [t("welcomeSample")] });

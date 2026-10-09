@@ -1,5 +1,6 @@
 import { t, localize, formatSpeed } from "../shared/i18n.js";
 import { SPEEDS, getSettings } from "../shared/settings.js";
+import { hasAutoDetect, requestAutoDetect, removeAutoDetect } from "../shared/auto-detect.js";
 
 const $ = (id) => document.getElementById(id);
 let settings;
@@ -109,6 +110,19 @@ chrome.runtime.onMessage.addListener((msg) => {
   }
   renderSpeed();
   renderPosition();
+  const auto = $("auto-detect");
+  const renderAuto = async () => {
+    auto.checked = await hasAutoDetect();
+    for (const row of document.querySelectorAll(".needs-auto")) row.classList.toggle("off", !auto.checked);
+  };
+  auto.addEventListener("change", async () => {
+    if (auto.checked) await requestAutoDetect().catch(() => false);
+    else await removeAutoDetect();
+    renderAuto();
+  });
+  chrome.permissions.onAdded.addListener(renderAuto);
+  chrome.permissions.onRemoved.addListener(renderAuto);
+  renderAuto();
   for (const b of $("position").children) b.addEventListener("click", () => { save({ position: b.dataset.value }); renderPosition(); });
   renderSites();
   $("site-form").addEventListener("submit", (e) => {

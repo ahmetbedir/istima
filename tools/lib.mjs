@@ -1,7 +1,7 @@
 // Shared helpers: a tiny static server and Chrome for Testing with the extension loaded.
 // Branded Chrome no longer honours --load-extension, so run `npm run setup` once to fetch Chrome for Testing.
 import http from "node:http";
-import { readFile, readdir } from "node:fs/promises";
+import { readFile, readdir, writeFile, cp, rm } from "node:fs/promises";
 import { extname, join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer-core";
@@ -40,10 +40,22 @@ async function chromePath() {
   return join(dir, platform, "chrome");
 }
 
+/** A copy of the extension with the optional host permission already granted (as if the user had turned on
+ * "find articles automatically"), since a test cannot click Chrome's permission prompt. */
+async function testBuild() {
+  const dir = join(ROOT, "tools", ".cache", "extension-test");
+  await rm(dir, { recursive: true, force: true });
+  await cp(EXTENSION, dir, { recursive: true });
+  const manifest = JSON.parse(await readFile(join(dir, "manifest.json"), "utf8"));
+  manifest.host_permissions = manifest.optional_host_permissions;
+  await writeFile(join(dir, "manifest.json"), JSON.stringify(manifest, null, 2));
+  return dir;
+}
+
 /** Launch Chrome for Testing with İstima loaded. Returns {browser, extId}. */
 export async function launch({ headless = true, viewport = { width: 1280, height: 800, deviceScaleFactor: 2 } } = {}) {
   const browser = await puppeteer.launch({
-    executablePath: await chromePath(), headless, pipe: true, enableExtensions: [EXTENSION], defaultViewport: viewport,
+    executablePath: await chromePath(), headless, pipe: true, enableExtensions: [await testBuild()], defaultViewport: viewport,
     args: ["--autoplay-policy=no-user-gesture-required", "--lang=tr", "--hide-scrollbars"],
   });
   const sw = await browser.waitForTarget((t) => t.type() === "service_worker" && t.url().endsWith("background.js"));

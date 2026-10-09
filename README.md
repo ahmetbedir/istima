@@ -18,7 +18,8 @@ Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla doğal bir sesle okuyan, y
 
 ## Özellikler
 
-- **Tek tıkla dinleme.** Türkçe bir haber açıldığında köşede “Haberi dinle” düğmesi belirir. Menü, reklam ve yorumlar atlanır.
+- **Tek tıkla dinleme.** Haberde araç çubuğu simgesine, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>'ye ya da sağ tık menüsüne basın. İsteğe bağlı **“Haberleri otomatik bul”** açıkken her Türkçe haberin köşesinde “Haberi dinle” düğmesi kendiliğinden belirir. Menü, reklam ve yorumlar atlanır.
+- **Az izin.** Kurulumda hiçbir siteye erişim istemez (activeTab). Tüm sitelere erişim yalnızca otomatik bulma açılırsa, isteğe bağlı izinle istenir; içerik betiği o zaman `chrome.scripting.registerContentScripts` ile kaydedilir.
 - **Her sitede çalışır.** Site listesi yok; haber metni [Mozilla Readability](https://github.com/mozilla/readability) ve Türkçe haber sitelerine göre ayarlanmış filtrelerle ayıklanır. AA, NTV, Hürriyet, Sözcü, Cumhuriyet, Habertürk, Milliyet ve TRT Haber'de denendi.
 - **Doğru Türkçe okuma.** Sayılar, tarihler, saatler, para birimleri, kısaltmalar ve metindeki İngilizce kelimeler modelin kendi normalleştiricisiyle okunuşa çevrilir.
 - **Okunan yeri gösterir.** Okunan paragraf vurgulanır, sayfa onu takip eder; <kbd>Alt</kbd>+tık ile istediğiniz paragraftan başlar.
@@ -48,7 +49,7 @@ Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla doğal bir sesle okuyan, y
          └──────────── popup / ayarlar ────────┘
 ```
 
-1. **İçerik betiği** (`extension/content/`) sayfanın dilini ve yapısını kontrol eder, Readability ile haberi ayıklar, kategori etiketi, künye, “Google'da takip edin” ve telif notu gibi satırları atar ve her paragrafı sayfadaki öğesiyle eşler.
+1. **İçerik betiği** (`extension/content/`), kullanıcı istediğinde (activeTab) ya da otomatik bulma açıksa her sayfada, sayfanın dilini ve yapısını kontrol eder, Readability ile haberi ayıklar, kategori etiketi, künye, “Google'da takip edin” ve telif notu gibi satırları atar ve her paragrafı sayfadaki öğesiyle eşler.
 2. **Arka plan** (`extension/background.js`) okuma oturumunu tutar ve sayfa, popup ve ses belgesi arasında mesajları taşır.
 3. **Offscreen belge** (`extension/offscreen/`) modeli bir Web Worker'da çalıştırır, paragrafları oynatmanın 25 saniye önünden üretir ve Web Audio ile çalar. Eklenti sayfaları çapraz köken yalıtımlı olduğu için ONNX Runtime 4 iş parçacığıyla çalışır: model ~1 saniyede hazır olur ve konuşmayı gerçek zamandan çok daha hızlı üretir.
 4. **Ses motoru** (`extension/engine/`, `extension/models/`): [Antalia-2 Mini](https://huggingface.co/cloud0day3/antalia-mini), 7,6 M parametreli, 48 kHz çıkışlı Türkçe TTS modeli. ONNX grafikleri, Türkçe normalleştirici ve çıkarım kodu modelin [Hugging Face Space'inden](https://huggingface.co/spaces/cloud0day3/antalia-mini) alındı (fp32 akustik + fp16 vocoder, 22,8 MB).

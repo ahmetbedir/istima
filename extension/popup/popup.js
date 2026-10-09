@@ -1,5 +1,6 @@
 import { t, localize, formatSpeed } from "../shared/i18n.js";
 import { SPEEDS } from "../shared/settings.js";
+import { hasAutoDetect, requestAutoDetect } from "../shared/auto-detect.js";
 
 const $ = (id) => document.getElementById(id);
 const ICON_PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.2-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6z" fill="currentColor"/></svg>';
@@ -111,6 +112,8 @@ chrome.runtime.onMessage.addListener((msg) => {
 });
 
 $("listen").addEventListener("click", startFromTab);
+// the permission prompt may close the popup; the background picks the grant up either way
+$("auto-on").addEventListener("click", () => requestAutoDetect().then((ok) => { $("auto-hint").hidden = ok; }, () => {}));
 $("read-anyway").addEventListener("click", startFromTab);
 $("toggle").addEventListener("click", () => control("toggle"));
 $("prev").addEventListener("click", () => control("prev"));
@@ -133,6 +136,7 @@ $("open-shortcuts").addEventListener("click", (e) => { e.preventDefault(); chrom
 
 (async () => {
   localize();
+  hasAutoDetect().then((on) => { $("auto-hint").hidden = on; });
   [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   state = await send({ type: "get-state", tabId: tab?.id });
   render();

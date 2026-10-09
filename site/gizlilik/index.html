@@ -35,7 +35,7 @@
 
       <h2>Sayfa içeriği</h2>
       <p>Bir haberi dinlemek istediğinizde İstima, açık olan sayfanın metnini okuyup haberin gövdesini ayıklar. Bu metin yalnızca bilgisayarınızda, eklentinin içinde gelen yapay zekâ modeline verilir ve sese dönüştürülür. Metin ve üretilen ses hiçbir sunucuya gönderilmez, diske kaydedilmez ve okuma bitince bellekten silinir.</p>
-      <p>Türkçe haber olup olmadığını anlamak için eklenti, ziyaret ettiğiniz http ve https sayfalarının dilini ve yapısını cihazınızda kontrol eder. Bu kontrolün sonucu da hiçbir yere iletilmez.</p>
+      <p>Varsayılan olarak İstima yalnızca siz istediğinizde (araç çubuğu simgesi, kısayol veya sağ tık menüsü) o anki sekmeye erişir. Ayarlardan “Haberleri otomatik bul” seçeneğini açarsanız, Türkçe haber olup olmadığını anlamak için ziyaret ettiğiniz http ve https sayfalarının dilini ve yapısını cihazınızda kontrol eder. Bu kontrolün sonucu da hiçbir yere iletilmez.</p>
 
       <h2>Ayarlar</h2>
       <p>Okuma hızı, düğmenin konumu ve düğmenin gösterilmeyeceği siteler gibi tercihleriniz tarayıcının <code>chrome.storage.sync</code> alanında saklanır. Tarayıcı eşitlemesini açtıysanız bu ayarlar Google hesabınız üzerinden kendi cihazlarınız arasında eşitlenebilir. Bu veriler bize ulaşmaz.</p>
@@ -45,11 +45,12 @@
 
       <h2>İzinler</h2>
       <ul>
-        <li><strong>Sitelerdeki içeriğe erişim:</strong> haberi bulmak, “Haberi dinle” düğmesini göstermek ve okunan paragrafı vurgulamak için.</li>
+        <li><strong>activeTab:</strong> siz istediğinizde açık sekmedeki haberi okumak ve okunan paragrafı vurgulamak için.</li>
+        <li><strong>Tüm sitelere erişim (isteğe bağlı):</strong> yalnızca “Haberleri otomatik bul” seçeneğini açarsanız istenir; “Haberi dinle” düğmesini haber sayfalarında kendiliğinden göstermek için. Ayarlardan istediğiniz zaman kapatabilirsiniz.</li>
         <li><strong>offscreen:</strong> sesi arka planda üretip çalabilmek için.</li>
         <li><strong>storage:</strong> ayarlarınızı saklamak için.</li>
         <li><strong>contextMenus:</strong> “Seçili metni İstima ile dinle” sağ tık menüsü için.</li>
-        <li><strong>activeTab ve scripting:</strong> eklenti kurulmadan önce açılmış sekmelerde, siz istediğinizde okuma yapabilmek için.</li>
+        <li><strong>scripting:</strong> haber ayıklayıcıyı yukarıdaki izinlerle sekmeye yüklemek için.</li>
       </ul>
 
       <h2>Bu web sitesi</h2>

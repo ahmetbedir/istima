@@ -3,6 +3,11 @@
 import { DEFAULTS, getSettings } from "./shared/settings.js";
 
 const OFFSCREEN_URL = "offscreen/offscreen.html";
+const CONTENT_FILES = ["vendor/readability/Readability-readerable.js", "vendor/readability/Readability.js", "content/player-ui.js", "content/content.js"];
+// Host access is optional: without it İstima reads a page when the user asks (activeTab); with it ("find
+// articles automatically") the content script runs on every page and offers the "Listen" button by itself.
+const AUTO_ORIGINS = ["http://*/*", "https://*/*"];
+const AUTO_SCRIPT_ID = "istima-auto";
 const t = (key, subs) => chrome.i18n.getMessage(key, subs) || key;
 
 // ------------------------------------------------------------------ session (survives worker restarts)
@@ -125,10 +130,7 @@ async function extractFromTab(tabId, opts = {}) {
   try {
     return await ask();
   } catch {
-    await chrome.scripting.executeScript({
-      target: { tabId },
-      files: ["vendor/readability/Readability-readerable.js", "vendor/readability/Readability.js", "content/player-ui.js", "content/content.js"],
-    });
+    await chrome.scripting.executeScript({ target: { tabId }, files: CONTENT_FILES });
     return ask();
   }
 }
@@ -192,6 +194,29 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   }
 });
 
+// ------------------------------------------------------------------ automatic article detection
+/** Register the content script for every page when the optional host permission is granted, and remove it
+ * when it is revoked. Returns whether automatic detection is on. */
+async function syncAutoDetect({ injectOpenTabs = false } = {}) {
+  const granted = await chrome.permissions.contains({ origins: AUTO_ORIGINS });
+  const registered = (await chrome.scripting.getRegisteredContentScripts({ ids: [AUTO_SCRIPT_ID] })).length > 0;
+  if (granted && !registered) {
+    await chrome.scripting.registerContentScripts([{ id: AUTO_SCRIPT_ID, matches: AUTO_ORIGINS, js: CONTENT_FILES, runAt: "document_idle", persistAcrossSessions: true }]);
+  } else if (!granted && registered) {
+    await chrome.scripting.unregisterContentScripts({ ids: [AUTO_SCRIPT_ID] });
+  }
+  if (granted && injectOpenTabs) {
+    // pages that are already open get the button too (the content script ignores a second injection)
+    for (const tab of await chrome.tabs.query({ url: AUTO_ORIGINS })) {
+      chrome.scripting.executeScript({ target: { tabId: tab.id }, files: CONTENT_FILES }).catch(() => {});
+    }
+  }
+  return granted;
+}
+
+chrome.permissions.onAdded.addListener(() => syncAutoDetect({ injectOpenTabs: true }));
+chrome.permissions.onRemoved.addListener(() => syncAutoDetect());
+
 // ------------------------------------------------------------------ shortcuts, context menu, lifecycle
 chrome.commands.onCommand.addListener((command) => {
   const map = { "toggle-reading": "toggle", "stop-reading": "stop", "next-paragraph": "next", "prev-paragraph": "prev" };
@@ -215,12 +240,16 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 chrome.runtime.onInstalled.addListener(async ({ reason }) => {
   createMenus();
+  syncAutoDetect({ injectOpenTabs: true });
   const current = await chrome.storage.sync.get(null);
   await chrome.storage.sync.set({ ...DEFAULTS, ...current });
   if (reason === "install") chrome.tabs.create({ url: "welcome/welcome.html" });
 });
 
-chrome.runtime.onStartup.addListener(createMenus);
+chrome.runtime.onStartup.addListener(() => {
+  createMenus();
+  syncAutoDetect();
+});
 
 chrome.tabs.onRemoved.addListener(async (tabId) => {
   await ready;

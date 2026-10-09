@@ -300,13 +300,13 @@
   "message": "Open an article"
  },
  "welcomeStep1": {
-  "message": "Visit any Turkish news site. İstima finds the article on its own."
+  "message": "Visit any Turkish news site. İstima extracts the article on its own."
  },
  "welcomeStep2Title": {
-  "message": "Press “Listen”"
+  "message": "Press Listen"
  },
  "welcomeStep2": {
-  "message": "Click the button in the corner or the İstima icon in the toolbar."
+  "message": "Click the İstima icon in the toolbar or press Alt+Shift+D. With automatic detection on, the corner “Listen” button works too."
  },
  "welcomeStep3Title": {
   "message": "Sit back"
@@ -334,5 +334,29 @@
  },
  "welcomePrivacy": {
   "message": "No server, no account, no tracking. The text never leaves your computer."
+ },
+ "optAutoDetect": {
+  "message": "Find articles automatically"
+ },
+ "optAutoDetectHint": {
+  "message": "When on, İstima checks every page for a Turkish article on your device and shows the “Listen” button in the corner. Chrome asks for access to all sites for this; no data leaves your device. When off, read from the toolbar icon, the right-click menu or Alt+Shift+D."
+ },
+ "popupAutoOff": {
+  "message": "The corner “Listen” button is off"
+ },
+ "popupAutoEnable": {
+  "message": "Turn on"
+ },
+ "welcomeAutoTitle": {
+  "message": "Find articles automatically?"
+ },
+ "welcomeAuto": {
+  "message": "Turn this on and a “Listen” button appears in the corner whenever you open a Turkish article. Chrome asks for access to all sites; the check runs on your device and nothing is sent. Without it, read from the toolbar icon or with Alt+Shift+D."
+ },
+ "welcomeAutoButton": {
+  "message": "Turn on"
+ },
+ "welcomeAutoOn": {
+  "message": "On ✓"
  }
 }

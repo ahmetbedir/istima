@@ -2,14 +2,14 @@
 
 Bu dosyadaki metinler Chrome Web Store Developer Dashboard'daki alanlara olduğu gibi yapıştırılmak için hazırlandı.
 
-**Yüklenecek paket:** `dist/istima-1.0.0.zip` (`cd tools && npm run package` ile yeniden üretilir)
+**Yüklenecek paket:** `dist/istima-1.0.1.zip` (`cd tools && npm run package` ile yeniden üretilir)
 **Görseller:** `store/images/` (`npm run screenshots && npm run assets` ile yeniden üretilir)
 
 ---
 
 ## 1. Paket (Package)
 
-Dashboard → **Add new item** → `dist/istima-1.0.0.zip` dosyasını yükleyin.
+Dashboard → **Add new item** → `dist/istima-1.0.1.zip` dosyasını yükleyin.
 
 ## 2. Mağaza girişi (Store listing)
 
@@ -33,8 +33,8 @@ Haberleri okumayın, dinleyin.
 İstima, gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla doğal bir sesle okur. Yapay zekâ sesi tamamen bilgisayarınızda üretilir: sunucu yok, hesap yok, takip yok.
 
 NASIL ÇALIŞIR
-• Türkçe bir haber açtığınızda sağ alt köşede “Haberi dinle” düğmesi belirir.
-• Düğmeye basın; ses birkaç saniye içinde başlar.
+• Bir haber açın ve araç çubuğundaki İstima simgesine tıklayın (ya da Alt+Shift+D'ye basın); ses birkaç saniye içinde başlar.
+• İsterseniz “Haberleri otomatik bul” seçeneğini açın: Türkçe bir haber açtığınızda köşede “Haberi dinle” düğmesi kendiliğinden belirir.
 • Okunan paragraf sayfada vurgulanır, sayfa okunan yeri takip eder.
 • Sekme değiştirseniz de okuma sürer; araç çubuğundaki İstima simgesinden kontrol edin.
 
@@ -66,8 +66,8 @@ Don't read the news. Listen to it.
 İstima reads Turkish news articles on the sites you visit in a natural voice, with one click. The AI voice runs entirely on your computer: no server, no account, no tracking.
 
 HOW IT WORKS
-• Open a Turkish article and a “Listen” button appears in the corner.
-• Press it; speech starts within seconds.
+• Open an article and click the İstima toolbar icon (or press Alt+Shift+D); speech starts within seconds.
+• Optionally turn on “Find articles automatically” and a “Listen” button appears in the corner of every Turkish article.
 • The paragraph being read is highlighted and the page follows along.
 • Switch tabs and reading continues; control it from the İstima toolbar icon.
 
@@ -123,9 +123,11 @@ Kullanıcı araç çubuğu simgesine, sağ tık menüsüne veya klavye kısayolu
 Eklenti kurulmadan önce açılmış bir sekmede kullanıcı okumayı başlattığında (activeTab ile) metin ayıklayıcı içerik betiğini o sekmeye yüklemek için. Uzak kod çalıştırılmaz; yalnızca paketteki dosyalar yüklenir.
 ```
 
-**Ana makine izni (Host permission: http://*/*, https://*/*, içerik betiği)**
+**İsteğe bağlı ana makine izni (optional_host_permissions: http://*/*, https://*/*)**
+
+Kurulumda istenmez. Yalnızca kullanıcı ayarlardan “Haberleri otomatik bul” seçeneğini açtığında Chrome'un izin penceresiyle istenir. Panelde gerekçe sorulursa:
 ```
-İstima belirli bir site listesiyle çalışmaz; kullanıcının ziyaret ettiği herhangi bir haber sitesinde Türkçe haber olup olmadığını cihaz üzerinde tespit eder, “Haberi dinle” düğmesini gösterir, haber metnini ayıklar ve okunan paragrafı sayfada vurgular. Sayfa içeriği hiçbir sunucuya gönderilmez.
+Bu izin isteğe bağlıdır ve kurulumda istenmez. Kullanıcı ayarlardan “Haberleri otomatik bul” seçeneğini açarsa istenir: İstima belirli bir site listesiyle çalışmadığı için, kullanıcının açtığı herhangi bir haber sayfasında Türkçe haber olup olmadığını cihaz üzerinde tespit edip “Haberi dinle” düğmesini kendiliğinden göstermek için kullanılır. Sayfa içeriği hiçbir sunucuya gönderilmez. İzin verilmezse eklenti activeTab ile, yalnızca kullanıcı simgeye, kısayola veya sağ tık menüsüne bastığında çalışır.
 ```
 
 ### Uzak kod (Remote code)

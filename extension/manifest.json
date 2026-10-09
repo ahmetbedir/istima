@@ -3,7 +3,7 @@
   "name": "__MSG_extName__",
   "short_name": "__MSG_extShortName__",
   "description": "__MSG_extDescription__",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "default_locale": "tr",
   "author": "Ubeyd Gencer",
   "homepage_url": "https://istima.ubeydgencer.com",
@@ -28,40 +28,50 @@
     "type": "module"
   },
   "options_page": "options/options.html",
-  "permissions": ["offscreen", "storage", "contextMenus", "activeTab", "scripting"],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": [
-        "vendor/readability/Readability-readerable.js",
-        "vendor/readability/Readability.js",
-        "content/player-ui.js",
-        "content/content.js"
-      ],
-      "run_at": "document_idle"
-    }
+  "permissions": [
+    "offscreen",
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
   ],
   "commands": {
     "toggle-reading": {
-      "suggested_key": { "default": "Alt+Shift+D" },
+      "suggested_key": {
+        "default": "Alt+Shift+D"
+      },
       "description": "__MSG_cmdToggle__"
     },
     "stop-reading": {
-      "suggested_key": { "default": "Alt+Shift+X" },
+      "suggested_key": {
+        "default": "Alt+Shift+X"
+      },
       "description": "__MSG_cmdStop__"
     },
     "next-paragraph": {
-      "suggested_key": { "default": "Alt+Shift+Right" },
+      "suggested_key": {
+        "default": "Alt+Shift+Right"
+      },
       "description": "__MSG_cmdNext__"
     },
     "prev-paragraph": {
-      "suggested_key": { "default": "Alt+Shift+Left" },
+      "suggested_key": {
+        "default": "Alt+Shift+Left"
+      },
       "description": "__MSG_cmdPrev__"
     }
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
   },
-  "cross_origin_embedder_policy": { "value": "require-corp" },
-  "cross_origin_opener_policy": { "value": "same-origin" }
+  "cross_origin_embedder_policy": {
+    "value": "require-corp"
+  },
+  "cross_origin_opener_policy": {
+    "value": "same-origin"
+  }
 }
