@@ -80,7 +80,7 @@ npm run package      # dist/istima-<sürüm>.zip
 Siteyi yayınlamak için:
 
 ```bash
-npx wrangler pages deploy site --project-name istima
+node tools/site-version.mjs && npx wrangler pages deploy site --project-name istima
 ```
 
 ## Lisans ve teşekkürler
