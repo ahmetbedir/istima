@@ -53,9 +53,7 @@ GİZLİLİK
 
 AÇIK KAYNAK
 İstima Apache-2.0 lisanslı açık kaynaktır: https://github.com/ubeydgencer/istima
-Ses: Antalia-2 Mini (PatientDesk AI, Apache-2.0). Çalıştırma: ONNX Runtime Web (MIT). Metin ayıklama: Mozilla Readability (Apache-2.0). Ses sentetiktir; gerçek bir kişiye ait değildir.
-
-Chrome, Edge, Brave, Opera, Vivaldi ve Arc gibi Chromium tabanlı tarayıcılarda çalışır.
+Ses, açık kaynak Antalia-2 Mini modeliyle üretilir. Ses sentetiktir; gerçek bir kişiye ait değildir.
 ```
 
 ### Detailed description (English)
@@ -85,7 +83,7 @@ PRIVACY
 
 OPEN SOURCE
 Apache-2.0: https://github.com/ubeydgencer/istima
-Voice: Antalia-2 Mini (PatientDesk AI, Apache-2.0). Runtime: ONNX Runtime Web (MIT). Extraction: Mozilla Readability (Apache-2.0). The voice is synthetic, not a real person's.
+Speech comes from the open-source Antalia-2 Mini model. The voice is synthetic, not a real person's.
 ```
 
 ## 3. Gizlilik uygulamaları (Privacy practices)
@@ -158,6 +156,8 @@ https://istima.ubeydgencer.com/gizlilik/
 - Görünürlük: **Herkese açık (Public)**
 - Bölgeler: Tüm bölgeler (veya yalnızca Türkiye ve Türkçe konuşulan bölgeler)
 - Fiyat: Ücretsiz
+
+> Not: Açıklamada tarayıcı adları listesi, uzun teşekkür/kütüphane listeleri gibi ürünü anlatmayan isim yığınları kullanmayın; Chrome Web Mağazası bunları “anahtar kelime spam'i” sayıp reddediyor (1.0.1 ilk gönderimi bu yüzden reddedildi).
 
 ## 5. Yayından sonra
 
