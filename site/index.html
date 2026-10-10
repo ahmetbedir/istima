@@ -62,7 +62,9 @@
         "license": "https://www.apache.org/licenses/LICENSE-2.0",
         "isAccessibleForFree": true,
         "featureList": [
-          "Türkçe haberleri otomatik bulur ve tek tıkla okur",
+          "Türkçe haberleri ayıklar ve tek tıkla okur",
+          "İsteğe bağlı otomatik bulma: her Türkçe haberde köşede Haberi dinle düğmesi",
+          "Varsayılan olarak hiçbir siteye erişmez; yalnızca kullanıcı istediğinde okur",
           "Okunan paragrafı sayfada vurgular",
           "Sayıları, tarihleri, para birimlerini ve kısaltmaları doğru okur",
           "Hız ayarı ve klavye kısayolları",
@@ -91,6 +93,7 @@
           { "@type": "Question", "name": "Okuduğum haberler bir sunucuya gönderiliyor mu?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Ses, eklentinin içindeki yapay zekâ modeliyle doğrudan bilgisayarınızda üretilir. Metin, ses veya kullanım verisi hiçbir yere gönderilmez." } },
           { "@type": "Question", "name": "Hangi tarayıcılarda çalışır?", "acceptedAnswer": { "@type": "Answer", "text": "Google Chrome, Microsoft Edge, Brave, Opera, Vivaldi ve Arc gibi Chromium tabanlı tarayıcıların güncel sürümlerinde çalışır." } },
           { "@type": "Question", "name": "Hangi haber sitelerinde çalışır?", "acceptedAnswer": { "@type": "Answer", "text": "Belirli bir site listesi yoktur. İstima açtığınız sayfadaki Türkçe haber metnini kendisi bulur; Anadolu Ajansı, NTV, Hürriyet, Sözcü, Cumhuriyet, Habertürk, Milliyet ve TRT Haber gibi sitelerde denenmiştir." } },
+          { "@type": "Question", "name": "Neden tüm sitelere erişim izni istiyor?", "acceptedAnswer": { "@type": "Answer", "text": "Varsayılan olarak istemez; İstima yalnızca kullanıcı simgeye bastığında o sekmeye erişir. Bu izin yalnızca isteğe bağlı Haberleri otomatik bul seçeneği açılırsa istenir ve kontrol tamamen cihazda yapılır." } },
           { "@type": "Question", "name": "İnternet bağlantısı gerekiyor mu?", "acceptedAnswer": { "@type": "Answer", "text": "Seslendirme için gerekmez. Model eklentiyle birlikte gelir; sayfa açıldıktan sonra okuma tamamen çevrimdışı yapılabilir." } },
           { "@type": "Question", "name": "Ses kime ait?", "acceptedAnswer": { "@type": "Answer", "text": "Ses sentetiktir ve gerçek bir kişiye ait değildir. PatientDesk AI'ın Apache-2.0 lisanslı açık kaynak modeli Antalia-2 Mini kullanılır." } }
         ]
@@ -209,7 +212,7 @@
           <article class="feature">
             <span class="f-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
             <h3>Gizliliğiniz cihazınızda</h3>
-            <p>Ses bilgisayarınızda üretilir. Okuduğunuz haber hiçbir sunucuya gitmez; hesap açmanız ya da giriş yapmanız gerekmez.</p>
+            <p>Ses bilgisayarınızda üretilir, haber hiçbir sunucuya gitmez. Varsayılan olarak hiçbir siteye erişmez; yalnızca siz istediğinizde okur.</p>
           </article>
           <article class="feature">
             <span class="f-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8v4l2.5 2.5M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -279,6 +282,7 @@
           <h2>Okuduğunuz haber sizinle kalır</h2>
           <p class="lead">Çoğu seslendirme aracı metni bir sunucuya gönderir. İstima göndermez. Yapay zekâ modeli eklentinin içinde gelir ve WebAssembly ile doğrudan tarayıcınızda çalışır.</p>
           <ul class="checks">
+            <li>Varsayılan olarak hiçbir siteye erişmez; yalnızca siz istediğinizde okur</li>
             <li>Metin, ses veya kullanım verisi toplanmaz</li>
             <li>Analitik, çerez ve reklam yoktur</li>
             <li>Hesap ya da giriş gerekmez</li>
@@ -325,10 +329,11 @@
         <div class="install-cta">
           <a class="btn btn-primary btn-lg" id="store-link" href="#zip" data-store="">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span id="store-label">Chrome Web Mağazası çok yakında</span>
+            <span id="store-label">Chrome Web Mağazası'nda incelemede</span>
           </a>
           <a class="btn btn-ghost btn-lg" href="https://github.com/ubeydgencer/istima/releases/latest/download/istima-1.0.1.zip">Zip olarak indir (v1.0.1)</a>
         </div>
+        <p class="install-note">Mağaza onayı beklenirken zip ile hemen kurabilirsiniz. <a href="https://github.com/ubeydgencer/istima/releases">Sürüm notları</a></p>
         <div class="manual card" id="zip">
           <h3>Zip ile kurulum</h3>
           <ol>
@@ -336,6 +341,7 @@
             <li>Adres çubuğuna <code>chrome://extensions</code> yazın (Edge'de <code>edge://extensions</code>).</li>
             <li>Sağ üstten <strong>Geliştirici modu</strong>nu açın.</li>
             <li><strong>Paketlenmemiş öğe yükle</strong>ye basıp çıkardığınız klasörü seçin.</li>
+            <li>Açılan hoş geldin sayfasında isterseniz <strong>Haberleri otomatik bul</strong>u açın; köşedeki “Haberi dinle” düğmesi o zaman belirir.</li>
           </ol>
         </div>
       </div>
