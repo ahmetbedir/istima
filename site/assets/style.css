@@ -118,7 +118,18 @@ code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace; background: va
 
 .compat { padding: 28px 0 8px; }
 .compat p { text-align: center; color: var(--muted); font-size: 14px; margin: 0 0 14px; }
-.compat ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 34px; list-style: none; padding: 0; margin: 0; font: 600 18px/1.2 var(--serif); color: color-mix(in srgb, var(--text) 62%, transparent); }
+.compat ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 36px; list-style: none; padding: 0; margin: 0; font: 600 18px/1.2 var(--serif); color: color-mix(in srgb, var(--text) 62%, transparent); }
+.compat li { display: inline-flex; align-items: center; gap: 10px; transition: color .2s; }
+.compat li svg { width: 26px; height: 26px; fill: currentColor; flex: none; transition: fill .2s; }
+.compat li:hover { color: var(--text); }
+.compat li:hover svg { fill: var(--c); }
+.b-chrome { --c: #4285F4; }
+.b-edge { --c: #0078D7; }
+.b-brave { --c: #FB542B; }
+.b-opera { --c: #FF1B2D; }
+.b-vivaldi { --c: #EF3939; }
+.b-arc { --c: #E8516A; }
+@media (max-width: 560px) { .compat ul { gap: 14px 24px; font-size: 16px; } .compat li svg { width: 22px; height: 22px; } }
 
 /* sections */
 .section { padding: clamp(64px, 9vw, 120px) 0; }
