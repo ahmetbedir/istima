@@ -8,6 +8,7 @@
 Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla doğal bir sesle okuyan, yapay zekâ sesi tamamen cihazda çalışan ücretsiz tarayıcı eklentisi.</p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle"><strong>Chrome Web Mağazası</strong></a> ·
   <a href="https://istima.ubeydgencer.com">Web sitesi</a> ·
   <a href="https://github.com/ubeydgencer/istima/releases/latest">İndir</a> ·
   <a href="https://istima.ubeydgencer.com/gizlilik/">Gizlilik</a> ·
@@ -31,7 +32,7 @@ Gezdiğiniz sitelerdeki Türkçe haberleri tek tıkla doğal bir sesle okuyan, y
 
 ## Kurulum
 
-**Chrome Web Mağazası:** yakında.
+**Chrome Web Mağazası:** [İstima'yı ekle](https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle) (Chrome, Edge, Brave, Opera, Vivaldi).
 
 **Zip ile:** [Son sürümü](https://github.com/ubeydgencer/istima/releases/latest) indirip çıkarın, `chrome://extensions` → **Geliştirici modu** → **Paketlenmemiş öğe yükle** ile klasörü seçin. Depoyu klonladıysanız doğrudan `extension/` klasörünü yükleyebilirsiniz.
 
@@ -100,4 +101,4 @@ Ses sentetiktir ve gerçek bir kişiye ait değildir. Lütfen dinleyenlere sente
 
 **İstima** is a free, open-source Chrome extension that reads Turkish news articles aloud. It finds the article on any site, skips the clutter, highlights the paragraph being read, and speaks with [Antalia-2 Mini](https://huggingface.co/cloud0day3/antalia-mini), a 7.6M-parameter Turkish TTS model that runs **entirely on your device** through ONNX Runtime Web (WebAssembly, 4 threads in a cross-origin-isolated offscreen document). No server, no account, no tracking; speech works offline.
 
-Install from the [latest release](https://github.com/ubeydgencer/istima/releases/latest) (load unpacked) or, soon, the Chrome Web Store. See *Geliştirme* above for the test and build scripts. Licensed under Apache-2.0.
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle), or load the [latest release](https://github.com/ubeydgencer/istima/releases/latest) unpacked. See *Geliştirme* above for the test and build scripts. Licensed under Apache-2.0.

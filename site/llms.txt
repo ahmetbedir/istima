@@ -4,4 +4,5 @@
 
 - [Ana sayfa (Turkish)](https://istima.ubeydgencer.com/): features, how it works, FAQ, install
 - [Gizlilik politikası](https://istima.ubeydgencer.com/gizlilik/): privacy policy (no data collected)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle)
 - [Source code](https://github.com/ubeydgencer/istima)

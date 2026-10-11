@@ -1,7 +1,7 @@
 // İstima website: sticky header shadow, the audio sample player, the store link.
 
-// Set this to the Chrome Web Store listing once it is published; until then the button points at the zip.
-const STORE_URL = "";
+// The Chrome Web Store listing. The links are also written into the HTML; this keeps any "#yukle" button in step.
+const STORE_URL = "https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle";
 
 (() => {
   const header = document.querySelector(".site-header");

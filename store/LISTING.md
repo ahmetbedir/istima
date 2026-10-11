@@ -161,6 +161,9 @@ https://istima.ubeydgencer.com/gizlilik/
 
 ## 5. Yayından sonra
 
+Yayında: https://chromewebstore.google.com/detail/idnhjopkmlgdhipcfplknfdfpkcehhle
+
+
 Mağaza bağlantısı belli olunca `site/assets/main.js` içindeki `STORE_URL` sabitini doldurun ve siteyi yeniden yayınlayın; “Chrome'a ekle” düğmeleri mağazaya yönlenir.
 
 ## Microsoft Edge Eklentileri (isteğe bağlı, ücretsiz)
